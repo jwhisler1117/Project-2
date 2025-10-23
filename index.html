@@ -1,96 +1,199 @@
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <title>Project 2 — Persuasive or Deceptive Visualization?</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <style>
-    body {
-      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
-      max-width: 900px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      line-height: 1.55;
-      color: #111827;
-    }
-    h1, h2 {
-      line-height: 1.25;
-    }
-    header {
-      text-align: center;
-      margin-bottom: 2rem;
-    }
-    figure {
-      margin: 1.25rem 0;
-    }
-    figcaption {
-      color: #6b7280;
-      font-size: 0.95rem;
-      margin-top: 0.5rem;
-    }
-    .panel {
-      border: 1px solid #e5e7eb;
-      border-radius: 12px;
-      padding: 1.25rem;
-      margin: 1.5rem 0;
-      background: #fafafa;
-    }
-    ul {
-      margin: 0.5rem 0 0 1.25rem;
-    }
-    .muted {
-      color: #6b7280;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <h1>Persuasive or Deceptive Visualization?</h1>
-    <p class="muted">Joe Whisler — jwhisler@ucsd.edu</p>
-  </header>
+  <head>
+    <title>Project 2 Report</title>
+    <style>
+      :root {
+        --color-neutral-95: hsl(220 10% 95%);
+        --color-neutral-90: hsl(220 10% 90%);
+        --color-neutral-80: hsl(220 10% 80%);
+        --color-neutral-70: hsl(220 10% 70%);
+        --color-neutral-60: hsl(220 10% 60%);
+        --color-neutral-50: hsl(220 10% 50%);
+        --color-neutral-40: hsl(220 10% 40%);
+        --color-neutral-30: hsl(220 10% 30%);
+        --color-neutral-20: hsl(220 10% 20%);
+        --color-neutral-10: hsl(220 10% 10%);
+      }
 
-  <section>
-    <h2>Proposition</h2>
-    <p><strong>[STATE YOUR PROPOSITION HERE]</strong></p>
-  </section>
+      html {
+        font: 100%/1.5 system-ui;
+        counter-reset: figure;
+        background: var(--color-neutral-95);
+        max-width: min(75vw, 80em);
+        margin: 0 auto;
+      }
 
-  <section class="panel">
-    <h2>FOR the Proposition</h2>
+      /* Headings */
 
-    <figure>
-      <img src="heatmap_2yr_blocks_2000_2019.png" alt="Heatmap showing complaint distribution by race and time period." width="100%">
-      <figcaption><strong>Caption:</strong> [Short caption explaining the insight of your heatmap]</figcaption>
-    </figure>
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        line-height: 1.1;
+        font-weight: 600;
+        text-wrap: balance;
+      }
 
-    <h3>Design Decisions and Rationale</h3>
-    <ul>
-      <li>[Rationale 1]</li>
-      <li>[Rationale 2]</li>
-      <li>[Rationale 3]</li>
-    </ul>
-  </section>
+      h1,
+      h2 {
+        border-bottom: 1px solid var(--color-neutral-80);
+        padding-bottom: 0.2em;
+      }
 
-  <section class="panel">
-    <h2>AGAINST the Proposition</h2>
+      h1 {
+        margin-block: 1em 0.5rem;
+        font-size: clamp(2.5em, 150% + 2vh + 2vw, 10vmin);
+        font-weight: 800;
 
-    <figure>
-      <img src="Line Chart.png" alt="Line chart showing ratio of Black vs All Other complainants." width="100%">
-      <figcaption><strong>Caption:</strong> [Short caption explaining the insight of your line chart]</figcaption>
-    </figure>
+        small {
+          display: block;
+          width: fit-content;
+          padding: 0.2em 0.5em;
+          margin-inline: auto;
+          color: white;
+          background: var(--color-neutral-40);
+          font-size: 40%;
+          text-transform: uppercase;
+          white-space: nowrap;
+        }
+      }
 
-    <h3>Design Decisions and Rationale</h3>
-    <ul>
-      <li>[Rationale 1]</li>
-      <li>[Rationale 2]</li>
-      <li>[Rationale 3]</li>
-    </ul>
-  </section>
+      h2 {
+        font-size: 180%;
+        color: var(--color-neutral-30);
+      }
 
-  <section>
-    <h2>Final Reflection</h2>
-    <p>[Write your final reflection here — a few paragraphs discussing which visualization is more persuasive, how framing affects perception, and what ethical lessons you took from the project.]</p>
-  </section>
+      h3 {
+        font-size: 130%;
+      }
 
-  <p class="muted">Charts created with Python (matplotlib and seaborn) and exported as PNG files.</p>
-</body>
+      /* Lists */
+
+      ul,
+      ol {
+        padding-inline-start: 2em;
+      }
+
+      li {
+        &::marker {
+          color: var(--color-neutral-40);
+        }
+
+        + li {
+          margin-top: 0.2em;
+        }
+      }
+
+      /* Sectioning elements */
+
+      header {
+        padding-block: 1em;
+        text-align: center;
+      }
+
+      main {
+        background: white;
+        color: var(--color-neutral-20);
+        border-radius: 1rem;
+        padding: 0.1rem 2rem;
+      }
+
+      /* Figures */
+
+      figure {
+        margin: 1em 0;
+        padding: 0.5rem;
+        margin-inline: -0.5em;
+        border: 1px solid var(--color-neutral-80);
+        box-shadow: 0 0.1em 0.2em var(--color-neutral-95);
+        text-align: center;
+        background: white;
+
+        > figcaption {
+          font: 500 75% var(--font-sans);
+          background: var(--color-neutral-95);
+          padding: 0.5rem;
+          margin: -0.5rem;
+          margin-top: 0.5rem;
+          counter-increment: figure;
+          text-align: left;
+
+          &::before {
+            content: 'Figure ' counter(figure) ': ';
+            font-weight: bold;
+            color: var(--color-neutral-40);
+          }
+
+          a:not(:hover, :focus, :active) {
+            color: inherit;
+            text-decoration: underline;
+            text-decoration-color: color-mix(
+              in lab,
+              currentColor,
+              transparent 70%
+            );
+          }
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <header>
+      <h1>
+        <small>Assignment 4</small>
+        Persuasive or Deceptive Visualization?
+      </h1>
+
+      <p><strong>Your Name</strong> — <em>Your UCSD Email Address</em></p>
+    </header>
+
+    <main>
+      <h2>Proposition: [STATE PROPOSITION]</h2>
+
+      <section>
+        <h3>FOR the Proposition</h3>
+
+        <figure>
+          <img src="heatmap_2yr_blocks_2000_2019.png" alt="" />
+          <figcaption>BRIEF CAPTION HERE.</figcaption>
+        </figure>
+
+        <p>Design Decisions and Rationale:</p>
+
+        <ul>
+          <li>RATIONALE_1</li>
+          <li>RATIONALE_2</li>
+          <li>RATIONALE_3</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>AGAINST the Proposition</h3>
+
+        <figure>
+          <img src="Line Chart.png" alt="" />
+          <figcaption>BRIEF CAPTION HERE.</figcaption>
+        </figure>
+
+        <p>Design Decisions and Rationale:</p>
+
+        <ul>
+          <li>RATIONALE_1</li>
+          <li>RATIONALE_2</li>
+          <li>RATIONALE_3</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Final Reflection</h2>
+
+        <p>[WRITE FINAL REFLECTION PARAGRAPHS HERE.]</p>
+      </section>
+    </main>
+  </body>
 </html>
