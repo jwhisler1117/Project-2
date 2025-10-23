@@ -1,8 +1,7 @@
-
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Project 2 Report</title>
+    <title>Project 2 Report — Persuasive or Deceptive Visualization?</title>
     <style>
       :root {
         --color-neutral-95: hsl(220 10% 95%);
@@ -26,7 +25,6 @@
       }
 
       /* Headings */
-
       h1,
       h2,
       h3,
@@ -45,8 +43,8 @@
       }
 
       h1 {
-        margin-block: 1em 0.5rem;
-        font-size: clamp(2.5em, 150% + 2vh + 2vw, 10vmin);
+        margin-block: 0.5em 0.25rem;
+        font-size: clamp(2em, 120% + 1.5vh + 1.5vw, 6vmin);
         font-weight: 800;
 
         small {
@@ -72,7 +70,6 @@
       }
 
       /* Lists */
-
       ul,
       ol {
         padding-inline-start: 2em;
@@ -89,7 +86,6 @@
       }
 
       /* Sectioning elements */
-
       header {
         padding-block: 1em;
         text-align: center;
@@ -103,7 +99,6 @@
       }
 
       /* Figures */
-
       figure {
         margin: 1em 0;
         padding: 0.5rem;
@@ -127,18 +122,9 @@
             font-weight: bold;
             color: var(--color-neutral-40);
           }
-
-          a:not(:hover, :focus, :active) {
-            color: inherit;
-            text-decoration: underline;
-            text-decoration-color: color-mix(
-              in lab,
-              currentColor,
-              transparent 70%
-            );
-          }
         }
       }
+
       /* Resize and center all chart images */
       figure img {
         width: 75%;
@@ -146,10 +132,9 @@
         height: auto;
         display: block;
         margin: 0 auto;
-        border-radius: 8px;               /* optional: soft corners */
-        box-shadow: 0 2px 6px rgba(0,0,0,0.1);  /* optional: subtle shadow */
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
       }
-
     </style>
   </head>
 
@@ -164,22 +149,29 @@
     </header>
 
     <main>
-      <h2>Proposition: [STATE PROPOSITION]</h2>
+      <h2>Proposition</h2>
+      <p><strong>Complaints against the NYPD disproportionately involve Black complainants.</strong></p>
 
       <section>
         <h3>FOR the Proposition</h3>
 
         <figure>
-          <img src="heatmap_2yr_blocks_2000_2019.png" alt="" />
-          <figcaption>BRIEF CAPTION HERE.</figcaption>
+          <img
+            src="heatmap_2yr_blocks_2000_2019.png"
+            alt="Heatmap showing NYPD complaints by complainant ethnicity across 2-year periods, 2000–2019."
+          />
+          <figcaption>
+            This heatmap highlights how complaint intensity remains consistently highest for Black complainants
+            across two-year periods from 2000–2019.
+          </figcaption>
         </figure>
 
-        <p>Design Decisions and Rationale:</p>
+        <p><strong>Design Decisions and Rationale:</strong></p>
 
         <ul>
-          <li>RATIONALE_1</li>
-          <li>RATIONALE_2</li>
-          <li>RATIONALE_3</li>
+          <li>Used a warm red color palette to evoke urgency and highlight higher counts of complaints.</li>
+          <li>Grouped years into 2-year blocks to smooth variation and emphasize persistent disparity.</li>
+          <li>Alphabetical ordering and a dominant dark-red band visually direct attention toward Black complainants.</li>
         </ul>
       </section>
 
@@ -187,23 +179,39 @@
         <h3>AGAINST the Proposition</h3>
 
         <figure>
-          <img src="Line Chart.png" alt="" />
-          <figcaption>BRIEF CAPTION HERE.</figcaption>
+          <img
+            src="Line Chart.png"
+            alt="Line chart showing ratio of Black vs All Other complainants, 2010–2019."
+          />
+          <figcaption>
+            The line chart displays a gradual decline in the ratio of Black to all other complainants from
+            2010–2019, implying that racial disparities may be improving over time.
+          </figcaption>
         </figure>
 
-        <p>Design Decisions and Rationale:</p>
+        <p><strong>Design Decisions and Rationale:</strong></p>
 
         <ul>
-          <li>RATIONALE_1</li>
-          <li>RATIONALE_2</li>
-          <li>RATIONALE_3</li>
+          <li>Used soft blues and grays to create a neutral and analytical appearance, reducing emotional bias.</li>
+          <li>Limited the range to 2010–2019 to focus on recent progress and imply ongoing improvement.</li>
+          <li>Expressed data as a ratio rather than raw counts to normalize population differences and lower perceived disparity.</li>
         </ul>
       </section>
 
       <section>
         <h2>Final Reflection</h2>
-
-        <p>[WRITE FINAL REFLECTION PARAGRAPHS HERE.]</p>
+        <p>
+          These two visualizations demonstrate how framing and design choices can heavily influence interpretation.
+          The heatmap emphasizes persistent racial disparities through color intensity and historical range,
+          leading viewers to infer systemic bias. In contrast, the line chart reframes the same topic to suggest
+          improvement and progress, using normalization and restrained colors to soften emotional impact.
+        </p>
+        <p>
+          This exercise reinforced how seemingly objective data can be visually shaped to convey distinct — even opposing — narratives.
+          Context, color, and normalization can dramatically shift perception.
+          Effective visualization requires balancing clarity and persuasion, ensuring visual design supports truth
+          rather than distortion.
+        </p>
       </section>
     </main>
   </body>
