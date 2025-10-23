@@ -6,53 +6,67 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <style>
     body {
-      font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
       max-width: 900px;
       margin: 2rem auto;
       padding: 0 1rem;
       line-height: 1.55;
       color: #111827;
     }
-    h1, h2 { line-height: 1.25; }
-    figure { margin: 1.25rem 0; }
-    figcaption { color: #6b7280; font-size: .95rem; margin-top: .5rem; }
+    h1, h2 {
+      line-height: 1.25;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+    figure {
+      margin: 1.25rem 0;
+    }
+    figcaption {
+      color: #6b7280;
+      font-size: 0.95rem;
+      margin-top: 0.5rem;
+    }
     .panel {
       border: 1px solid #e5e7eb;
       border-radius: 12px;
-      padding: 1rem 1.25rem;
-      margin: 1.25rem 0;
+      padding: 1.25rem;
+      margin: 1.5rem 0;
       background: #fafafa;
     }
-    ul { margin: .5rem 0 0 1.25rem; }
-    .muted { color: #6b7280; }
+    ul {
+      margin: 0.5rem 0 0 1.25rem;
+    }
+    .muted {
+      color: #6b7280;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>Persuasive or Deceptive Visualization?</h1>
-    <p class="muted">Joe Whisler — jwhisler@ucsd.edu</p>
+    <p class="muted">Your Name — yourname@ucsd.edu</p>
   </header>
 
   <section>
     <h2>Proposition</h2>
-    <p><strong>Complaints against the NYPD disproportionately involve Black complainants.</strong></p>
+    <p><strong>[STATE YOUR PROPOSITION HERE]</strong></p>
   </section>
 
   <section class="panel">
     <h2>FOR the Proposition</h2>
 
     <figure>
-      <img src="heatmap_2yr_blocks_2000_2019.png" 
-           alt="Heatmap showing NYPD complaints by complainant ethnicity, 2000–2019." 
-           width="100%">
-      <figcaption><strong>Caption:</strong> The heatmap highlights how complaint intensity remains consistently highest for Black complainants across two-year periods.</figcaption>
+      <img src="heatmap_2yr_blocks_2000_2019.png" alt="Heatmap showing complaint distribution by race and time period." width="100%">
+      <figcaption><strong>Caption:</strong> [Short caption explaining the insight of your heatmap]</figcaption>
     </figure>
 
     <h3>Design Decisions and Rationale</h3>
     <ul>
-      <li>Used a warm red color palette to draw attention to areas of high complaint volume.</li>
-      <li>Grouped years into 2-year blocks to smooth noise and emphasize long-term patterns.</li>
-      <li>Alphabetical ordering and consistent scale keep the layout clear while color conveys disparity.</li>
+      <li>[Rationale 1]</li>
+      <li>[Rationale 2]</li>
+      <li>[Rationale 3]</li>
     </ul>
   </section>
 
@@ -60,25 +74,23 @@
     <h2>AGAINST the Proposition</h2>
 
     <figure>
-      <img src="Line Chart.png" 
-           alt="Line chart showing ratio of Black vs. All Other complainants, 2010–2019." 
-           width="100%">
-      <figcaption><strong>Caption:</strong> The ratio of Black to All Other complainants shows a gradual decline from 2010–2019, suggesting improvement in racial disparity.</figcaption>
+      <img src="Line Chart.png" alt="Line chart showing ratio of Black vs All Other complainants." width="100%">
+      <figcaption><strong>Caption:</strong> [Short caption explaining the insight of your line chart]</figcaption>
     </figure>
 
     <h3>Design Decisions and Rationale</h3>
     <ul>
-      <li>Used soft blue tones to create a calm, neutral aesthetic and minimize emotional impact.</li>
-      <li>Focused on 2010–2019 to highlight a modern downward trend.</li>
-      <li>Plotted as a ratio for year-to-year comparison, reducing emphasis on overall complaint volume.</li>
+      <li>[Rationale 1]</li>
+      <li>[Rationale 2]</li>
+      <li>[Rationale 3]</li>
     </ul>
   </section>
 
   <section>
     <h2>Final Reflection</h2>
-    <p>These visualizations demonstrate how design choices—such as color, time range, and data normalization—can significantly alter interpretation. The heatmap’s intensity implies persistent racial disparity, while the line chart’s narrowing ratio suggests gradual improvement. Both are true within their contexts, yet each omits critical background information such as substantiation rates and population baselines. The exercise underscores how easily visualization framing can persuade, even with the same underlying data.</p>
+    <p>[Write your final reflection here — a few paragraphs discussing which visualization is more persuasive, how framing affects perception, and what ethical lessons you took from the project.]</p>
   </section>
 
-  <p class="muted">Charts created with matplotlib and seaborn; exported as PNG files.</p>
+  <p class="muted">Charts created with Python (matplotlib and seaborn) and exported as PNG files.</p>
 </body>
 </html>
